@@ -9,7 +9,7 @@ public class Main {
         }
         System.out.println();
 
-        int ageVersion = 2012; // Если я правильно понял то 0 это ios а 1 это андроид
+        int ageVersion = 2012;
         int clientOS1 = 0;
 
         if (clientOS1 == 0) {
