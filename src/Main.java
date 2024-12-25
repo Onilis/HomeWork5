@@ -3,33 +3,34 @@ public class Main {
         int clientOS = 0;
 
         if (clientOS == 0) {
-            System.out.println(" Установите версию приложения для iOS по ссылке. ");
-        } else if (clientOS == 1) {
+            System.out.println("Установите версию приложения для iOS по ссылке. ");
+        } else {
             System.out.println("Установите версию приложения для Android по ссылке. ");
         }
         System.out.println();
 
-        int ageVersion = 2012;
-        int clientOS1 = 0;
 
-        if (clientOS1 == 0) {
-            if (ageVersion < 2015) System.out.println(" Установите облегченную версию приложения для iOS по ссылке. ");
-            else if (ageVersion > 2015) {
-                System.out.println("Установите версию приложения для iOS по ссылке. ");
-            }
-        } else if (clientOS == 1) {
-            if (ageVersion > 2015) System.out.println("Установите версию приложения для Android по ссылке. ");
-            else if (ageVersion < 2015) {
-                System.out.println(" Установите облегченную версию приложения для Android по ссылке. ");
-            }
+        int clientDeviceYear = 2012;
+        int clientOS1 = 0;
+        if (clientOS1 == 0 & clientDeviceYear > 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке. ");
+        } else if (clientOS1 == 0 & clientDeviceYear < 2015) {
+            System.out.println("Установите облегченную версию приложения для IOS по ссылке. ");
+        } else if (clientOS1 == 1 & clientDeviceYear > 2015) {
+            System.out.println("Установите версию приложения для Android по ссылке. ");
+        } else {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке. ");
         }
         System.out.println();
 
-        int year = 2543;
-        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
-            System.out.println(year + " - високосный год.");
+
+        int year = 2549;
+        if (year <= 1584) {
+            System.out.println("Год должен быть больше 1584");
+        } else if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " является высокосным годом.");
         } else {
-            System.out.println(year + " - невисокосный год.");
+            System.out.println(year + " не является высокосным годом.");
         }
         System.out.println();
 
@@ -46,7 +47,7 @@ public class Main {
             deliveryTime = 3;
             System.out.println("Потребуется дней: " + deliveryTime);
         } else {
-            System.out.println(" Свыше 100 км доставки нет. ");
+            System.out.println("Свыше 100 км доставки нет. ");
         }
         System.out.println();
 
